@@ -14,7 +14,7 @@ const  Accordion = () => {
                 <div onClick={() => toggleActive()} className={active === true ? "project-card-active" : "project-card"} href="/">
                  <img src={require('../images/websiteprojectimage.png').default} alt="" />
                  <h1>Portfolio website</h1>
-                 <p id="website-card-overview">I created this website as a means to reach more people and potential employers. A fully functional and simple React application.</p>
+                 <p id="website-card-overview">{ProjectsData.website}</p>
                  <p className={active === true ? "project-card-info" : "project-card-info-active"}>{ProjectsData.expand}</p>
                  <button className="arrow-button"><img src={require('../images/portfoliodownarrow.png').default} alt="" /></button>
                </div>
