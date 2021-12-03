@@ -307,7 +307,7 @@ a:hover {
 
 .project-card-info{
   display: flex;
-  height: 0%;
+  height: 100%;
   width: 100%;
   opacity: 100%;
   justify-content: center;
@@ -345,6 +345,7 @@ a:hover {
   width: 30%;
   align-self: center;
   transition: 0.3s ease-in-out;
+  opacity: 100%;
 }
 
 .arrow-button img:hover{
@@ -355,6 +356,7 @@ a:hover {
   background-color: #b4b4b433;
   border-radius: 7px;
   animation: shake 0.5s ease-in-out;
+  opacity: 100%;
 }
 
 .project-card:hover > .arrow-button > img{
