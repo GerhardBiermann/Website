@@ -23,7 +23,7 @@ return(
                 <li className = "menu-items"><NavLink to="/contact">Contact</NavLink></li>
             </ul>
         </div>
-        <div id="burger-menu" onClick={() => {setBurerMenu(!burgerMenu)}}><span id="burger lines"/></div>
+        <div id="burger-menu" onClick={() => {setBurerMenu(!burgerMenu)}}><span id="burger lines"></span></div>
       <Switch>
         <Route exact path='/' component={HomeContent}/>
         <Route path='/contact' component={Contact}/>
