@@ -45,6 +45,14 @@ a:hover {
   border-radius: 0 0 1.7vh 0.75vh;
 }
 
+#burger-menu{
+  height: 20px;
+  width: 20px;
+  background-color: rgb(72, 144, 252);
+  position: fixed;
+  margin: 0 0 0 20%;
+}
+
   /* ------------------
       home-container
       ------------------*/
@@ -193,6 +201,90 @@ a:hover {
   cursor: pointer;
 }
 
+@media(max-width:1000px){
+  #home-picture{
+    display: none;
+  }
+
+  #home-container{
+  margin-left: 20%;
+  width: 100%;
+  height: auto;
+  position: static;
+  display: grid;
+  grid-template-columns: 80% ;
+  grid-template-rows: 0% 20% 50% 50%;
+  }
+
+  #home-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    box-shadow: 0px 0px 17px rgba(136, 136, 136, 0.384);
+    width: 70%;
+    padding: 1vw 5vw 1vw 5vw;
+    border-radius: 1vw;
+  }
+  
+  #home-introduction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: large;
+    text-align: center;
+    margin: 0 0 0 0;
+    width: 90%;
+  }
+
+  #content-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #content-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 10% 0;
+    padding: 20% 0 0 0;
+  }
+  
+  #content-3{
+    display: flex;
+    line-height: 1.3em;
+    font-weight: 700;
+    font-size: 1.1em;
+    width:100%;
+    align-items: center;
+    text-align: center;
+    padding: 5% 5% 0% 5%;
+  }
+  
+  #content-4{
+    width: 100%;
+  }
+  
+  #skills-content{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 30%;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 16% 16% 16% 16% 16%;
+  }
+  
+  #skills-heading{
+    display: flex;
+    align-items: center;
+    grid-column: span 2;
+    padding: 0% 0 0 1%;
+    font-size: 1.8em;
+  }
+}
+
       /*-------------
         Projects Page
         -------------*/
@@ -245,7 +337,8 @@ a:hover {
   animation: shake 0.5s ease-in-out;
 }
 
-.project-card-active{
+.project-card-website-active,
+.project-card-cryptoworld-active{
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 10% 40% 40% 10%;
@@ -259,7 +352,8 @@ a:hover {
   transition: 0.3s ease-in-out;
 }
 
-.project-card-active:hover{
+.project-card-website-active:hover,
+.project-card-cryptoworld-active:hover{
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 10% 40% 40% 10%;
@@ -275,7 +369,8 @@ a:hover {
 }
 
 .project-card h1,
-.project-card-active h1{
+.project-card-website-active h1,
+.project-card-cryptoworld-active h1{
   display: flex;
   font-size: 1.5em;
   justify-content: center;
@@ -286,7 +381,8 @@ a:hover {
 }
 
 .project-card img:first-child,
-.project-card-active img:first-child{
+.project-card-website-active img:first-child,
+.project-card-cryptoworld-active img:first-child{
   object-fit: contain;
   height: 100%;
   grid-row: span 2; 
@@ -294,7 +390,7 @@ a:hover {
   grid-column: span 1;
 }
 
-#website-card-overview{
+.card-overview{
   display: flex;
   /* flex-direction: flex-start; */
   height: 100%;
@@ -316,7 +412,8 @@ a:hover {
   align-self: center;
 }
 
-.project-card-info-active{
+.project-card-website-info-active,
+.project-card-cryptoworld-info-active{
   display: flex;
   height: 100%;
   width: 100%;
@@ -377,7 +474,9 @@ a:hover {
 }
 
 @media (max-width: 950px) {
-  .project-card p{
+  .project-card p,
+  .project-card-website-active h1 + p,
+  .project-card-cryptoworld-active h1 + p{
     display: none;
     /* flex-direction: flex-start; */
     height: 100%;
@@ -386,7 +485,9 @@ a:hover {
     padding: 0 6% 0 6%;
     grid-column: span 1;
   }
-  .project-card h1{
+  .project-card h1,
+  .project-card-website-active h1,
+  .project-card-cryptoworld-active h1{
     display: flex;
     font-size: 1.5em;
     justify-content: center;
@@ -396,7 +497,9 @@ a:hover {
 }
 
 @media (max-width: 700px){
-  .project-card h1{
+  .project-card h1,
+  .project-card-website-active h1,
+  .project-card-cryptoworld-active h1{
     display: none;
     font-size: 1.5em;
     justify-content: center;
@@ -507,4 +610,65 @@ a:hover {
   margin-left: 25vw;
   margin-top: 10vh;
   font-size: larger;
+}
+
+@media(max-width: 1000px){
+  #form-container{
+    padding: 5% 10% 5% 10%;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 35% 35% 30% 30%;
+    margin-left: 20vw;
+    height: 70vh;
+    width: 80vw;
+  }
+
+  #additional-info-input{
+    padding: 1.1em 0 0 1em;
+    resize: none;
+    margin-top: 0vh;
+    border: none;
+    height: 15vh;
+    background-color: rgb(236, 236, 236);
+    grid-column: span 2;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  #additional-info-input:focus{
+    padding: 1.1em 0 0 1em;
+    resize: none;
+    margin-top: 0vh;
+    border: none;
+    height: 15vh;
+    color: rgb(77, 77, 77);
+    background-color: rgb(224, 224, 224);
+    grid-column: span 2;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  #name-input, #email-input{
+    padding-left: 1em;
+    margin: 0 0 0 0;
+    border: none;
+    height: 10vh;
+    width: 95%;
+    background-color: rgb(236, 236, 236);
+    grid-column: span 1;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  #name-input:focus, #email-input:focus{
+    padding-left: 1em;
+    margin: 0 0 0 0;
+    border: none;
+    height: 10vh;
+    width: 95%;
+    background-color: rgb(236, 236, 236);
+    grid-column: span 1;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
 }
