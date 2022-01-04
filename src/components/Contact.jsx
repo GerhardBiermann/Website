@@ -1,9 +1,10 @@
 import emailjs from "emailjs-com"
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
+import { MenuContext } from "./Navbar";
 
 const Contact = () => {
 
-
+const active = useContext(MenuContext)
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -15,10 +16,11 @@ const Contact = () => {
           }, (error) => {
               console.log(error.text);
           });
-          e.target.reset()
+          e.target.reset();
       };
     return ( 
         <>
+        <div className={active === true ? "contact-active" : "contact-inactive"}>
         <form ref={form} id="form-container" onSubmit={sendEmail}>
             <input type="text" id="email-input" placeholder="Email" name="Email"/>
             <input type="text" id="name-input" placeholder="Name" name="Name"/>
@@ -27,6 +29,7 @@ const Contact = () => {
         </form>
          <div id="form-info">
             <p>Feel free to contact me anytime and i will get back to you as soon as possible.</p>
+        </div>
         </div>
         </>
      );

@@ -6,6 +6,15 @@
   color: rgb(77, 77, 77);
 }
 
+.website-content {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 100% ;
+}
+
   /*---------
     Navbar
     ---------*/
@@ -20,6 +29,28 @@
   margin-top: 0;
   z-index: 1;
   box-shadow: 0px 0px 40px #888888;
+  transition: 0.4s ease-in-out;
+}
+
+.wrapper-inactive {
+  height: 100vh;
+  width: 20%;
+  background-color: rgb(243, 243, 243);
+  border-radius: 0 0 0 0;
+  position: fixed;
+  overflow: auto;
+  margin-top: 0;
+  z-index: 1;
+  box-shadow: 0px 0px 40px #888888;
+  transition: 0.4s ease-in-out;
+}
+
+.wrapper-inactive{
+  transform: translateX(-20vw);
+}
+
+.mobile-wrapper{
+  display: none;
 }
 
 a {
@@ -45,25 +76,103 @@ a:hover {
   border-radius: 0 0 1.7vh 0.75vh;
 }
 
-#burger-menu{
+#burger-menu,
+#burger-menu-active{
+  display: flex;
   height: 30px;
   width: 30px;
   background-color: rgb(72, 144, 252);
   position: fixed;
+  z-index: 2;
   margin: 0 0 0 20%;
+  transition: 0.4s ease-in-out;
 }
 
-#burger-lines{
-  display: inline-block;
-  overflow: hidden;
-  background-color: white;
+#burger-menu span,
+#burger-menu-active span{
+  margin: 12px 0 0 3px;
+  transition: 0.4s ease-in-out;
+}
+
+#burger-menu span, 
+#burger-menu span:before,
+#burger-menu span:after,
+#burger-menu-active span, 
+#burger-menu-active span:before,
+#burger-menu-active span:after{
+  cursor: pointer;
+  border-radius: 1px;
   height: 5px;
-  width: 20px;
-  margin: 0 0 0 20%;
+  width: 25px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: 0.3s ease-in-out;
+}
+#burger-menu span:before,
+#burger-menu-active span:before {
+  top: -10px;
+}
+#burger-menu span:after,
+#burger-menu-active span:after {
+  bottom: -10px; 
+}
+
+#burger-menu-active{
+  transform: translateX(-20vw);
+}
+
+#burger-menu-active span{
+  transform: translateX(-2px);
+}
+
+#burger-menu-active span:before {
+  transform: rotate(45deg) translateY(-4px) translateX(8px);
+}
+
+#burger-menu-active span:after{
+  transform: rotate(-45deg) translateY(4px) translateX(8px);
+}
+
+@media (max-width: 1000px) {
+  .wrapper{
+    display: block;
+  }
+  .mobile-wrapper{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(243, 243, 243);
+    border-radius: 0 0 0 0;
+    position: fixed;
+    overflow: auto;
+    margin-top: 0;
+    z-index: 1;
+    box-shadow: 0px 0px 40px #888888;
+  }
 }
   /* ------------------
       home-container
       ------------------*/
+
+.home-content-inactive{
+  height: 100vh;
+  transition: 0.4s ease-in-out;
+}
+
+.home-content-inactive{
+  transform: translateX(-10%);
+}
+
+.home-content-active{
+  height: 100vh;
+  transition: 0.4s ease-in-out;
+}
+
+.home-content-active{
+  transform: translateX(0%);
+}
 
 #home-container{
   margin-left: 20%;
@@ -297,6 +406,22 @@ a:hover {
         Projects Page
         -------------*/
 
+.project-inactive{
+  transition: 0.4s ease-in-out;
+}
+
+.project-inactive{
+  transform: translateX(-10%);
+}
+
+.project-active{
+  transition: 0.4s ease-in-out;
+}
+
+.project-active{
+  transform: translateX(0%);
+}
+
 #projects-content{
   display: grid;
   margin-left: 20vw;
@@ -505,6 +630,20 @@ a:hover {
 }
 
 @media (max-width: 700px){
+  .project-card{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 60% 0% 20%;
+    width: 60%;
+    margin: 5% 0 0 10%;
+    height: 30vh;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0px 0px 17px rgba(136, 136, 136, 0.384);
+    border-radius: 1vw;
+    transition: 0.3s ease-in-out;
+  }
+
   .project-card h1,
   .project-card-website-active h1,
   .project-card-cryptoworld-active h1{
@@ -522,10 +661,73 @@ a:hover {
     grid-row: span 2; 
     overflow: hidden;
   }
+
+.project-card-website-active{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 10% 40% 40% 10%;
+  width: 60%;
+  margin: 5% 0 0 10%;
+  height: 80vh;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0px 0px 17px rgba(136, 136, 136, 0.384);
+  border-radius: 1vw;
+  transition: 0.3s ease-in-out;
+  }
+
+  .project-card-cryptoworld-active{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10% 40% 40% 10%;
+    width: 60%;
+    margin: 5% 0 0 10%;
+    height: 60vh;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0px 0px 17px rgba(136, 136, 136, 0.384);
+    border-radius: 1vw;
+    transition: 0.3s ease-in-out;
+    }
+
+    .arrow-button{
+      display: flex;
+      grid-column: span 2;
+      height: 6vh;
+      justify-content: center;
+      border: none;
+      background-color: #b4b4b41e;
+      transition: 0.3s ease-in-out;
+    }
+  
+    .arrow-button img{
+      display: flex;
+      width: 30%;
+      align-self: center;
+      transition: 0.3s ease-in-out;
+      opacity: 100%;
+    }
 }
       /*------------
         Contact Form
         ------------*/
+
+
+.contact-inactive{
+  transition: 0.4s ease-in-out;
+}
+
+.contact-inactive{
+  transform: translateX(-10%);
+}
+
+.contact-active{
+  transition: 0.4s ease-in-out;
+}
+
+.contact-active{
+  transform: translateX(0%);
+}
 
 #form-container{
   padding: 5% 10% 5% 10%;

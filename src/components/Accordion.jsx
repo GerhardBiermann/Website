@@ -2,19 +2,19 @@ import { ProjectsData } from './ProjectsData';
 import React, {useState, useEffect} from 'react';
 
 const  Accordion = () => {
-    const [websiteActive, setWebsiteActive] = useState(false)
-    const [cryptoworldActive, setCryptoworldActive] = useState(false)
+    const [websiteActive, setWebsiteActive] = useState(false);
+    const [cryptoworldActive, setCryptoworldActive] = useState(false);
 
-    let accordionClass
+
+
     function toggleWebsiteActive(){
-        setWebsiteActive(!websiteActive)
+        setWebsiteActive(!websiteActive);
     }
     function toggleCryptoworldActive(){
-      setCryptoworldActive(!cryptoworldActive)
+      setCryptoworldActive(!cryptoworldActive);
   }
-
     return ( 
-        <>
+        <> 
                <div onClick={() => toggleWebsiteActive()} className={websiteActive === true ? "project-card-website-active" : "project-card"} href="/">
                  <img src={require('../images/websiteprojectimage.png').default} alt="" />
                  <h1>Portfolio website</h1>
@@ -29,7 +29,6 @@ const  Accordion = () => {
                  <p className={cryptoworldActive === true ? "project-card-info" : "project-card-cryptoworld-info-active"}>{ProjectsData.cryptoworldExpand}</p>
                  <button className="arrow-button"><img src={require('../images/portfoliodownarrow.png').default} alt="" /></button>
                </div>
-
         </>
      );
 }

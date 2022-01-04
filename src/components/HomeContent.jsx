@@ -1,6 +1,11 @@
+import React, {useContext} from 'react';
+import { MenuContext } from './Navbar';
+
 const HomeContent = () => {
+    const active = useContext(MenuContext)
     return ( 
         <> 
+<div className={active === true ? "home-content-active" : "home-content-inactive"}>
     <div id = "home-container">
     <div id="content-1">
         <div id ="home-picture">
@@ -54,8 +59,8 @@ const HomeContent = () => {
 
 <span className ="hamburger"></span>
 
-
 <div id = "burger-icon"></div>
+</div>
 </>
     );
 }
