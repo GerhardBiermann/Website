@@ -26,7 +26,7 @@ const  Accordion = () => {
                  <img src={require('../images/cryptoworldprojectimage.png').default} alt="" />
                  <h1>Cryptoworld</h1>
                  <p className="card-overview">{ProjectsData.cryptoworld}</p>
-                 <p className={cryptoworldActive === true ? "project-card-info" : "project-card-cryptoworld-info-active"}>{ProjectsData.cryptoworldExpand}</p>
+                 <p className={cryptoworldActive === true ? "project-card-info" : "project-card-cryptoworld-info-active"}>{ProjectsData.cryptoworldExpand}<a className="project-link" href='https://epic-mcnulty-a5731a.netlify.app/' target='_blank'>Click here</a></p>
                  <button className="arrow-button"><img src={require('../images/portfoliodownarrow.png').default} alt="" /></button>
                </div>
         </>

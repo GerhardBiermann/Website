@@ -549,7 +549,9 @@ a:hover {
 
 .project-card-website-info-active,
 .project-card-cryptoworld-info-active{
-  display: flex;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80% 20%;
   height: 100%;
   width: 100%;
   opacity: 0%;
@@ -598,6 +600,16 @@ a:hover {
   justify-content: center;
   border: none;
   cursor: pointer;
+}
+
+.project-link{
+  border: none;
+  text-decoration: none;
+}
+
+.project-link:hover{
+  border: none;
+  text-decoration: none;
 }
 
 @keyframes shake {
