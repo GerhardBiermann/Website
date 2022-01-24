@@ -473,7 +473,8 @@ a:hover {
 }
 
 .project-card-website-active,
-.project-card-cryptoworld-active{
+.project-card-cryptoworld-active,
+.project-card-weather-active{
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 10% 40% 40% 10%;
@@ -488,7 +489,8 @@ a:hover {
 }
 
 .project-card-website-active:hover,
-.project-card-cryptoworld-active:hover{
+.project-card-cryptoworld-active:hover,
+.project-card-weather-active:hover{
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 10% 40% 40% 10%;
@@ -505,7 +507,8 @@ a:hover {
 
 .project-card h1,
 .project-card-website-active h1,
-.project-card-cryptoworld-active h1{
+.project-card-cryptoworld-active h1,
+.project-card-weather-active h1{
   display: flex;
   font-size: 1.5em;
   justify-content: center;
@@ -517,7 +520,8 @@ a:hover {
 
 .project-card img:first-child,
 .project-card-website-active img:first-child,
-.project-card-cryptoworld-active img:first-child{
+.project-card-cryptoworld-active img:first-child,
+.project-card-weather-active img:first-child{
   object-fit: contain;
   height: 100%;
   grid-row: span 2; 
@@ -548,7 +552,8 @@ a:hover {
 }
 
 .project-card-website-info-active,
-.project-card-cryptoworld-info-active{
+.project-card-cryptoworld-info-active,
+.project-card-weather-info-active{
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 80% 20%;
@@ -623,7 +628,8 @@ a:hover {
 @media (max-width: 950px) {
   .project-card p,
   .project-card-website-active h1 + p,
-  .project-card-cryptoworld-active h1 + p{
+  .project-card-cryptoworld-active h1 + p,
+  .project-card-weather-active h1 + p{
     display: none;
     /* flex-direction: flex-start; */
     height: 100%;
@@ -634,7 +640,8 @@ a:hover {
   }
   .project-card h1,
   .project-card-website-active h1,
-  .project-card-cryptoworld-active h1{
+  .project-card-cryptoworld-active h1,
+  .project-card-weather-active h1{
     display: flex;
     font-size: 1.5em;
     justify-content: center;
@@ -667,7 +674,8 @@ a:hover {
 
   .project-card h1,
   .project-card-website-active h1,
-  .project-card-cryptoworld-active h1{
+  .project-card-cryptoworld-active h1,
+  .project-card-weather-active h1{
     display: none;
     font-size: 1.5em;
     justify-content: center;
@@ -710,6 +718,20 @@ a:hover {
     border-radius: 1vw;
     transition: 0.3s ease-in-out;
     }
+
+    .project-card-weather-active{
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-template-rows: 10% 40% 40% 10%;
+      width: 60vw;
+      margin: 5% 0 0 10%;
+      height: 60vh;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0px 0px 17px rgba(136, 136, 136, 0.384);
+      border-radius: 1vw;
+      transition: 0.3s ease-in-out;
+      }
 
     .arrow-button{
       display: flex;

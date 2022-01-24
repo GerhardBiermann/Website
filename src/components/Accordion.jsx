@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 const  Accordion = () => {
     const [websiteActive, setWebsiteActive] = useState(false);
     const [cryptoworldActive, setCryptoworldActive] = useState(false);
+    const [weatherActive, setWeatherActive] = useState(false);
 
 
 
@@ -12,7 +13,11 @@ const  Accordion = () => {
     }
     function toggleCryptoworldActive(){
       setCryptoworldActive(!cryptoworldActive);
-  }
+    }
+    function toggleWeatherActive(){
+      setWeatherActive(!weatherActive);
+    } 
+
     return ( 
         <> 
                <div onClick={() => toggleWebsiteActive()} className={websiteActive === true ? "project-card-website-active" : "project-card"} href="/">
@@ -27,6 +32,13 @@ const  Accordion = () => {
                  <h1>Cryptoworld</h1>
                  <p className="card-overview">{ProjectsData.cryptoworld}</p>
                  <p className={cryptoworldActive === true ? "project-card-info" : "project-card-cryptoworld-info-active"}>{ProjectsData.cryptoworldExpand}<a className="project-link" href='https://epic-mcnulty-a5731a.netlify.app/' target='_blank'>Click here</a></p>
+                 <button className="arrow-button"><img src={require('../images/portfoliodownarrow.png').default} alt="" /></button>
+               </div>
+               <div onClick={() => toggleWeatherActive()} className={weatherActive === true ? "project-card-weather-active" : "project-card"} href="/">
+                 <img src={require('../images/weatherprojectimage.png').default} alt="" />
+                 <h1>Weather app</h1>
+                 <p className="card-overview">{ProjectsData.weather}</p>
+                 <p className={weatherActive === true ? "project-card-info" : "project-card-weather-info-active"}>{ProjectsData.weatherExpand}<a className="project-link" href='https://epic-mcnulty-a5731a.netlify.app/' target='_blank'>Click here</a></p>
                  <button className="arrow-button"><img src={require('../images/portfoliodownarrow.png').default} alt="" /></button>
                </div>
         </>
