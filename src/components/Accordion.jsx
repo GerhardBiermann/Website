@@ -38,7 +38,7 @@ const  Accordion = () => {
                  <img src={require('../images/weatherprojectimage.png').default} alt="" />
                  <h1>Weather app</h1>
                  <p className="card-overview">{ProjectsData.weather}</p>
-                 <p className={weatherActive === true ? "project-card-info" : "project-card-weather-info-active"}>{ProjectsData.weatherExpand}<a className="project-link" href='https://epic-mcnulty-a5731a.netlify.app/' target='_blank'>Click here</a></p>
+                 <p className={weatherActive === true ? "project-card-info" : "project-card-weather-info-active"}>{ProjectsData.weatherExpand}<a className="project-link" href='https://kind-banach-b1044c.netlify.app' target='_blank'>Click here</a></p>
                  <button className="arrow-button"><img src={require('../images/portfoliodownarrow.png').default} alt="" /></button>
                </div>
         </>
