@@ -1,5 +1,4 @@
 import Accordion from './Accordion';
-import { ProjectsData } from './ProjectsData';
 import React, {useState, useEffect, useContext} from 'react';
 import {MenuContext} from './Navbar';
 
