@@ -206,6 +206,8 @@ a:hover {
   align-items: center;
   margin: -8% 12% 2% 20%;
   box-shadow: 0px 0px 17px rgba(136, 136, 136, 0.384);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 1vw 5vw 1vw 5vw;
   border-radius: 1vw;
@@ -285,7 +287,14 @@ a:hover {
 
 .skills-headings > h1:hover{
   cursor: pointer;
-  animation: shake 0.25s ease-in-out;
+  -webkit-animation: shake 0.25s ease-in-out;
+          animation: shake 0.25s ease-in-out;
+}
+
+@-webkit-keyframes shake{
+  33%{transform: translateX(-0.13em);}
+  66%{transform: translateX(0.13em);}
+  100%{transform: translateX(0em);}
 }
 
 @keyframes shake{
@@ -469,7 +478,8 @@ a:hover {
   border-radius: 1vw;
   border: none;
   /* transform: translateX(5px) translateY(-5px); */
-  animation: shake 0.5s ease-in-out;
+  -webkit-animation: shake 0.5s ease-in-out;
+          animation: shake 0.5s ease-in-out;
 }
 
 .project-card-website-active,
@@ -502,7 +512,8 @@ a:hover {
   border-radius: 1vw;
   border: none;
   /* transform: translateX(5px) translateY(-5px); */
-  animation: shake 0.5s ease-in-out;
+  -webkit-animation: shake 0.5s ease-in-out;
+          animation: shake 0.5s ease-in-out;
 }
 
 .project-card h1,
@@ -510,6 +521,7 @@ a:hover {
 .project-card-cryptoworld-active h1,
 .project-card-weather-active h1{
   display: flex;
+  opacity: 100%;
   font-size: 1.5em;
   justify-content: center;
   align-items: center;
@@ -522,7 +534,8 @@ a:hover {
 .project-card-website-active img:first-child,
 .project-card-cryptoworld-active img:first-child,
 .project-card-weather-active img:first-child{
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 100%;
   grid-row: span 2; 
   overflow: hidden;
@@ -594,7 +607,8 @@ a:hover {
   transition: 0.3s ease-in-out;
   background-color: #b4b4b433;
   border-radius: 7px;
-  animation: shake 0.5s ease-in-out;
+  -webkit-animation: shake 0.5s ease-in-out;
+          animation: shake 0.5s ease-in-out;
   opacity: 100%;
 }
 
@@ -685,7 +699,8 @@ a:hover {
 
   .project-card img:first-child{
     display: flex;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     height: 100%;
     grid-row: span 2; 
     overflow: hidden;
