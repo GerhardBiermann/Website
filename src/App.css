@@ -521,7 +521,7 @@ a:hover {
 .project-card-cryptoworld-active h1,
 .project-card-weather-active h1{
   display: flex;
-  opacity: 100%;
+  opacity: 1;
   font-size: 1.5em;
   justify-content: center;
   align-items: center;
@@ -546,7 +546,7 @@ a:hover {
   display: flex;
   /* flex-direction: flex-start; */
   height: 100%;
-  opacity: 100%;
+  opacity: 1;
   font-size: large;
   padding: 0 6% 0 6%;
   grid-column: span 1;
@@ -557,7 +557,7 @@ a:hover {
   display: flex;
   height: 100%;
   width: 100%;
-  opacity: 100%;
+  opacity: 1;
   justify-content: center;
   align-items: center;
   grid-column: span 2;
@@ -597,7 +597,7 @@ a:hover {
   width: 30%;
   align-self: center;
   transition: 0.3s ease-in-out;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .arrow-button img:hover{
@@ -609,11 +609,11 @@ a:hover {
   border-radius: 7px;
   -webkit-animation: shake 0.5s ease-in-out;
           animation: shake 0.5s ease-in-out;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .project-card:hover > .arrow-button > img{
-  opacity: 100%;
+  opacity: 1;
   display: flex;
   grid-column: span 2;
   justify-content: center;
@@ -763,7 +763,7 @@ a:hover {
       width: 30%;
       align-self: center;
       transition: 0.3s ease-in-out;
-      opacity: 100%;
+      opacity: 1;
     }
 }
       /*------------

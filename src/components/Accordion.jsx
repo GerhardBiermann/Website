@@ -35,14 +35,14 @@ const  Accordion = () => {
                  <p className={websiteActive === true ? "project-card-info" : "project-card-website-info-active"}>{ProjectsData.websiteExpand}</p>
                  <button className="arrow-button"><img src={require('../images/portfoliodownarrow.png').default} alt="" /></button>
                </div>
-               <div onClick={() => toggleCryptoworldActive()} className={cryptoworldActive === true ? "project-card-cryptoworld-active" : "project-card"} href="/">
+               <div onClick={() => toggleCryptoworldActive()} className={cryptoworldActive === true ? "project-card-cryptoworld-active" : "project-card"}>
                  <img src={require('../images/cryptoworldprojectimage.png').default} alt="" />
                  <h1>Cryptoworld</h1>
                  <p className="card-overview">{ProjectsData.cryptoworld}</p>
                  <p className={cryptoworldActive === true ? "project-card-info" : "project-card-cryptoworld-info-active"}>{ProjectsData.cryptoworldExpand}<a className="project-link" href='https://epic-mcnulty-a5731a.netlify.app/' target='_blank'>Click here</a></p>
                  <button className="arrow-button"><img src={require('../images/portfoliodownarrow.png').default} alt="" /></button>
                </div>
-               <div onClick={() => toggleWeatherActive()} className={weatherActive === true ? "project-card-weather-active" : "project-card"} href="/">
+               <div onClick={() => toggleWeatherActive()} className={weatherActive === true ? "project-card-weather-active" : "project-card"}>
                  <img src={require('../images/weatherprojectimage.png').default} alt="" />
                  <h1>Weather app</h1>
                  <p className="card-overview">{ProjectsData.weather}</p>
